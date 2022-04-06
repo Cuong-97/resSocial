@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resSocial</title>
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/a53c1c2401.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h2 class="name">resSocial</h2>
+            <div class="search_bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" placeholder="Search on resSocial">
+            </div>
+            <div class="create">
+                <label for="create_post" class="btn btn_primary">Create</label>
+                <div class="avatar">
+                    <img src="./img/a_1.jpg">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!---------------- main ---------------->
+    <main>
+        <div class="container">
+            <!---------------- left ---------------->
+            <div class="left">
+                <a class="profile">
+                    <div class="avatar">
+                        <img src="./img/a_1.jpg">
+                    </div>
+                    <div class="handle">
+                        <h4>Duy Cuong</h4>
+                        <p class="text_mute">
+                            @dayi
+                        </p>
+                    </div>
+                </a>
+
+                <!---------------- Sidebar ---------------->
+                <div class="sidebar">
+                    <a class="menu_item active">
+                        <span><i class="uil uil-house-user"></i></span><h3>Home</h3>
+                    </a>
+                    <a class="menu_item">
+                        <span><i class="uil uil-compass"></i></span><h3>Explore</h3>
+                    </a>
+                    <a class="menu_item" id="notifications">
+                        <span><i class="uil uil-bell"><small class="notifications_count">4</small></i></span><h3>Notifications</h3>
+                        <!---------------- Notifications popup ---------------->
+                        <div class="notifications_popup">
+                            <div>
+                                <div class="avatar">
+                                    <img src="./img/a_4.png">
+                                </div>
+                                <div class="notification_body">
+                                    <b>Yae Miko</b> mentioned you in a comment
+                                    <small class="text_mute">5 minutes ago</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="avatar">
+                                    <img src="./img/a_96.jpg">
+                                </div>
+                                <div class="notification_body">
+                                    <b>Yelan</b> accepted your friend request
+                                    <small class="text_mute">30 minutes ago</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="avatar">
+                                    <img src="./img/a_97.jpg">
+                                </div>
+                                <div class="notification_body">
+                                    <b>Kuki Shinobu</b> mentioned you in a comment
+                                    <small class="text_mute">1 hour ago</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="avatar">
+                                    <img src="./img/a_98.jpg">
+                                </div>
+                                <div class="notification_body">
+                                    <b>Kokomi</b> stated following you
+                                    <small class="text_mute">2 hour ago</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!---------------- End notifications popup ---------------->
+                    </a>
+                    <a class="menu_item" id="message_notification">
+                        <span><i class="uil uil-envelope-alt"><small class="notifications_count">5</small></i></span><h3>Messagse</h3>
+                    </a>
+                    <a class="menu_item">
+                        <span><i class="uil uil-bookmark"></i></span><h3>Bookmarks</h3>
+                    </a>
+                    <a class="menu_item">
+                        <span><i class="uil uil-chart-line"></i></span><h3>Analytics</h3>
+                    </a>
+                    <a class="menu_item" id="theme">
+                        <span><i class="uil uil-palette"></i></span><h3>Theme</h3>
+                    </a>
+                    <a class="menu_item">
+                        <span><i class="uil uil-setting"></i></span><h3>Settings</h3>
+                    </a>
+                </div>
+                <!---------------- End sidebar ---------------->
+                <label for="create_post" class="btn btn_primary">Create Post</label>
+            </div>
+            <!---------------- End left ---------------->
+
+
+            <!---------------- mid ---------------->
+            <div class="mid">
+                <!---------------- stories ---------------->
+                <div class="stories" id="open_story">
+                    <div class="story">
+                        <div class="avatar">
+                            <img src="./img/a_1.jpg" >
+                        </div>
+                        <p class="name">Your story</p>
+                    </div>
+                    <div class="story">
+                        <div class="avatar">
+                            <img src="./img/a_2.png" >
+                        </div>
+                        <p class="name">Raiden Shogun</p>
+                    </div>
+                    <div class="story">
+                        <div class="avatar">
+                            <img src="./img/a_98.jpg" >
+                        </div>
+                        <p class="name">Kokomi</p>
+                    </div>
+                    <div class="story">
+                        <div class="avatar">
+                            <img src="./img/a_4.png" >
+                        </div>
+                        <p class="name">Yoimiya</p>
+                    </div>
+                    <div class="story">
+                        <div class="avatar">
+                            <img src="./img/a_5.png" >
+                        </div>
+                        <p class="name">Yae Miko</p>
+                    </div>
+                    <div class="story">
+                        <div class="avatar">
+                            <img src="./img/a_6.png" >
+                        </div>
+                        <p class="name">Kamisato Ayaka</p>
+                    </div>
+                </div>
+                <!---------------- End stories ---------------->
+                <form class="create_post">
+                    <div class="avatar">
+                        <img src="./img/a_1.jpg" >
+                    </div>
+                    <input type="text" placeholder="What's on your mind, Cuong?" id="create_post">
+                    <input type="submit" value="Post" class="btn btn_primary">
+                </form>
+
+                <!---------------- feeds ---------------->
+                <div class="feeds">
+                    <!---------------- feeds 1---------------->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="avatar">
+                                    <img src="./img/a_6.png" >
+                                </div>
+                                <div class="info">
+                                    <h3>Kamisato Ayaka</h3>
+                                    <small>Inazuma, 15 MINUTES AGO</small>
+                                </div>
+                            </div>
+                            <span class="edit"><i class="fa-solid fa-ellipsis"></i></span>
+                        </div>
+
+                        <div class="photo" >
+                            <img src="./img/p_1.jpg" id="Zoom_photo_1" >
+                        </div>
+
+                        <div class="action_buttons">
+                            <div class="interaction_buttons">
+                                <span><i class="uil uil-heart" id="change_color_heart"></i></span>
+                                <span><i class="uil uil-comment-alt"></i></span>
+                                <span><i class="uil uil-share"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="uil uil-bookmark"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked_by">
+                            <span><img src="./img/a_8.png" ></span>
+                            <span><img src="./img/a_9.png" ></span>
+                            <span><img src="./img/a_7.png" ></span>
+                            <p>Liked by <b> Ayato </b> and <b>24 others</b></p>
+                        </div> 
+                        <div class="caption">
+                            <p>The Immovable God and the Eternal Euthymia</p>
+                        </div>
+                        <div class="comments text_muted">View all 30 comments</div>
+                    </div>
+                    <!---------------- feeds 2---------------->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="avatar">
+                                    <img src="./img/a_7.png" >
+                                </div>
+                                <div class="info">
+                                    <h3>Kamisato Ayato</h3>
+                                    <small>Inazuma, 30 MINUTES AGO</small>
+                                </div>
+                            </div>
+                            <span class="edit"><i class="fa-solid fa-ellipsis"></i></span>
+                        </div>
+
+                        <div class="photo">
+                            <img src="./img/p_2.jpg" id="Zoom_photo_2">
+                        </div>
+
+                        <div class="action_buttons">
+                            <div class="interaction_buttons">
+                                <span><i class="uil uil-heart" id="change_color_heart"></i></span>
+                                <span><i class="uil uil-comment-alt"></i></span>
+                                <span><i class="uil uil-share"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="uil uil-bookmark"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked_by">
+                            <span><img src="./img/a_8.png" ></span>
+                            <span><img src="./img/a_9.png" ></span>
+                            <span><img src="./img/a_7.png" ></span>
+                            <p>Liked by <b> Ayato </b> and <b>24 others</b></p>
+                        </div> 
+                        <div class="caption">
+                            <p>The Immovable God and the Eternal Euthymia</p>
+                        </div>
+                        <div class="comments text_muted">View all 30 comments</div>
+                    </div>
+                    <!---------------- feeds 3---------------->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="avatar">
+                                    <img src="./img/a_4.png" >
+                                </div>
+                                <div class="info">
+                                    <h3>Yae Miko</h3>
+                                    <small>Inazuma, 45 MINUTES AGO</small>
+                                </div>
+                            </div>
+                            <span class="edit"><i class="fa-solid fa-ellipsis"></i></span>
+                        </div>
+
+                        <div class="photo">
+                            <img>
+                                <iframe width="560" height="315" style="border-radius: 1rem;" src="https://www.youtube.com/embed/tV2QOX9fXEE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </img>
+                        </div>
+
+                        <div class="action_buttons">
+                            <div class="interaction_buttons">
+                                <span><i class="uil uil-heart" id="change_color_heart"></i></span>
+                                <span><i class="uil uil-comment-alt"></i></span>
+                                <span><i class="uil uil-share"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="uil uil-bookmark"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked_by">
+                            <span><img src="./img/a_8.png" ></span>
+                            <span><img src="./img/a_9.png" ></span>
+                            <span><img src="./img/a_7.png" ></span>
+                            <p>Liked by <b> Ayato </b> and <b>24 others</b></p>
+                        </div> 
+                        <div class="caption">
+                            <p>The Immovable God and the Eternal Euthymia</p>
+                        </div>
+                        <div class="comments text_muted">View all 30 comments</div>
+                    </div>
+                    <!---------------- feeds 4---------------->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="avatar">
+                                    <img src="./img/a_91.png" >
+                                </div>
+                                <div class="info">
+                                    <h3>Thoma</h3>
+                                    <small>Inazuma, 15 MINUTES AGO</small>
+                                </div>
+                            </div>
+                            <span class="edit"><i class="fa-solid fa-ellipsis"></i></span>
+                        </div>
+
+                        <div class="photo">
+                            <img src="./img/p_3.jpg" id="Zoom_photo_3">
+                        </div>
+
+                        <div class="action_buttons">
+                            <div class="interaction_buttons">
+                                <span><i class="uil uil-heart" id="change_color_heart"></i></span>
+                                <span><i class="uil uil-comment-alt"></i></span>
+                                <span><i class="uil uil-share"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="uil uil-bookmark"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked_by">
+                            <span><img src="./img/a_8.png" ></span>
+                            <span><img src="./img/a_9.png" ></span>
+                            <span><img src="./img/a_7.png" ></span>
+                            <p>Liked by <b> Ayato </b> and <b>24 others</b></p>
+                        </div> 
+                        <div class="caption">
+                            <p>The Immovable God and the Eternal Euthymia</p>
+                        </div>
+                        <div class="comments text_muted">View all 30 comments</div>
+                    </div>
+                    <!---------------- feeds 5---------------->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="avatar">
+                                    <img src="./img/a_92.png" >
+                                </div>
+                                <div class="info">
+                                    <h3>Ganyu</h3>
+                                    <small>Liyue, 55 MINUTES AGO</small>
+                                </div>
+                            </div>
+                            <span class="edit"><i class="fa-solid fa-ellipsis"></i></span>
+                        </div>
+
+                        <div class="photo">
+                            <img>
+                                <iframe width="560" height="315" style="border-radius: 1rem;" src="https://www.youtube.com/embed/ASO6t2zp_UI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </img>
+                        </div>
+
+                        <div class="action_buttons">
+                            <div class="interaction_buttons">
+                                <span><i class="uil uil-heart" id="change_color_heart"></i></span>
+                                <span><i class="uil uil-comment-alt"></i></span>
+                                <span><i class="uil uil-share"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="uil uil-bookmark"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked_by">
+                            <span><img src="./img/a_8.png" ></span>
+                            <span><img src="./img/a_9.png" ></span>
+                            <span><img src="./img/a_7.png" ></span>
+                            <p>Liked by <b> Ayato </b> and <b>24 others</b></p>
+                        </div> 
+                        <div class="caption">
+                            <p>The Immovable God and the Eternal Euthymia</p>
+                        </div>
+                        <div class="comments text_muted">View all 30 comments</div>
+                    </div>
+                </div>
+                <!---------------- End feeds ---------------->
+
+            </div>
+            <!---------------- End mid ---------------->
+
+
+            <!---------------- right ---------------->
+            <div class="right">
+                <!---------------- Messages ---------------->
+                <div class="messages">
+                    <div class="heading">
+                        <h4>Messages</h4>
+                        <i class="uil uil-edit"></i>
+                    </div>
+
+                    <!---------------- search bar ---------------->
+                    <div class="search_bar">
+                        <i class="uil uil-search"></i>
+                        <input type="search" placeholder="Search messages" id="message-search">
+                    </div>
+                    <!---------------- messages category ---------------->
+                    <div class="category">
+                        <h6 class="active">Primary</h6>
+                        <h6>General</h6>
+                        <h6 class="message_requests">Requests(6)</h6>
+                    </div>
+                    <!---------------- message ---------------->
+                    <!--------- message 1 --------->
+                    <div class="message">
+                        <div class="avatar">
+                            <img src="./img/a_2.png">
+                            <div class="active"></div>
+                        </div>
+                        <div class="message_body">
+                            <h5>Ei</h5>
+                            <p class="text_muted">Just woke up bruh</p>
+                        </div>
+                    </div>
+                    <!--------- message 2 --------->
+                    <div class="message">
+                        <div class="avatar">
+                            <img src="./img/a_7.png">
+                        </div>
+                        <div class="message_body">
+                            <h5>Ayato</h5>
+                            <p class="text_muted">lol u right</p>
+                        </div>
+                    </div>
+                    <!--------- message 3 --------->
+                    <div class="message">
+                        <div class="avatar">
+                            <img src="./img/a_8.png">
+                            <div class="active"></div>
+                        </div>
+                        <div class="message_body">
+                            <h5>Yoimiya</h5>
+                            <p>2 new messages</p>
+                        </div>
+                    </div>
+                    <!--------- message 4 --------->
+                    <div class="message">
+                        <div class="avatar">
+                            <img src="./img/a_9.png">
+                        </div>
+                        <div class="message_body">
+                            <h5>Kazuha</h5>
+                            <p>Birthday Tomorrow!</p>
+                        </div>
+                    </div>
+                    <!--------- message 5 --------->
+                    <div class="message">
+                        <div class="avatar">
+                            <img src="./img/a_93.png">
+                        </div>
+                        <div class="message_body">
+                            <h5>Klee</h5>
+                            <p class="text_muted">Ok</p>
+                        </div>
+                    </div>
+                </div>   
+                <!---------------- End Messages ----------------> 
+
+                <!---------------- Friend Requests ---------------->
+                <div class="friend_requests">
+                    <h4>Requests</h4>
+                    <div class="request">
+                        <div class="info">
+                            <div class="avatar">
+                                <img src="./img/a_94.png">
+                            </div>
+                            <div>
+                                <h5>Mona</h5>
+                                <p class="text_muted">8 mutual friend</p>
+                            </div>
+                        </div>
+                        <div class="action">
+                            <button class="btn btn_primary btn_accept_1">
+                                Accept
+                            </button>
+                            <button class="btn btn_decline_1">
+                                Decline
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="request">
+                        <div class="info">
+                            <div class="avatar">
+                                <img src="./img/a_95.png">
+                            </div>
+                            <div>
+                                <h5>Chide</h5>
+                                <p class="text_muted">5 mutual friend</p>
+                            </div>
+                        </div>
+                        <div class="action">
+                            <button class="btn btn_primary btn_accept_2">
+                                Accept
+                            </button>
+                            <button class="btn btn_decline_2">
+                                Decline
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------- End right ---------------->
+        </div>
+    </main>
+
+<!----------------------------------------------------------------------- Theme customization --------------------------------------------------------------------------->
+    <div class="customize_theme">
+        <div class="card">
+            <h2>Customize your view</h2>
+            <p class="text_muted">Manage your font size, color, and background</p>
+
+            <!---------------- font size ---------------->
+            <div class="font_size">
+                <h4>Font Size</h4>
+                <div>
+                    <h6>Aa</h6>
+                    <div class="choose_size">
+                        <span class="font_size_1"></span>
+                        <span class="font_size_2 active"></span>
+                        <span class="font_size_3"></span>
+                        <span class="font_size_4"></span>
+                        <span class="font_size_5"></span>
+                    </div>
+                    <h3>Aa</h3>
+                </div>
+            </div>
+
+            <!---------------- primary color ---------------->
+            <div class="color">
+                <h4>Color</h4>
+                <div class="choose_color">
+                    <span class="color_1 active"></span>
+                    <span class="color_2"></span>
+                    <span class="color_3"></span>
+                    <span class="color_4"></span>
+                    <span class="color_5"></span>
+                </div>
+            </div>
+
+            <!---------------- background color ---------------->
+            <div class="background">
+                <h4>Background</h4>
+                <div class="choose_bg">
+                    <div class="bg_1 active">
+                        <span></span>
+                        <h5 for="bg_1">Light</h5>
+                    </div>
+                    <div class="bg_2">
+                        <span></span>
+                        <h5 for="bg_2">Dim</h5>
+                    </div>
+                    <div class="bg_3">
+                        <span></span>
+                        <h5 for="bg_3">Lights Out</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<!--------------------------------------------------------------- Zoom photo feeds --------------------------------------------------------------------->
+    <div class="photo_feeds_1">
+        <img src="./img/p_1.jpg">
+    </div>
+    <div class="photo_feeds_2">
+        <img src="./img/p_2.jpg">
+    </div>
+    <div class="photo_feeds_3">
+        <img src="./img/p_3.jpg">
+    </div>
+
+<!--------------------------------------------------------------- Story show --------------------------------------------------------------------->
+    
+    <div class="story_show">
+        <div class="card">
+
+            <!-- Story items -->
+            <div class="stories">
+                <div class="story_item active">
+                    <img src="./img/a_2.png">
+                    <div>
+                        <h4>Raiden Shogun</h4>
+                        <h5>15 minutes ago</h5>
+                    </div>
+                </div>
+                <div class="story_item">
+                    <img src="./img/a_98.jpg">
+                    <div>
+                        <h4>Kokomi</h4>
+                        <h5>1 hour agoc</h5>
+                    </div>
+                </div>
+                <div class="story_item">
+                    <img src="./img/a_4.png">
+                    <div>
+                        <h4>Yae Miko</h4>
+                        <h5>5 hour agoc</h5>
+                    </div>
+                </div>
+                <div class="story_item">
+                    <img src="./img/a_5.png">
+                    <div>
+                        <h4>Eula</h4>
+                        <h5>8 hour agoc</h5>
+                    </div>
+                </div>
+                <div class="story_item">
+                    <img src="./img/a_6.png">
+                    <div>
+                        <h4>Kamisato Ayaka</h4>
+                        <h5>15 hour agoc</h5>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Story content -->
+            <div class="story_content">
+                <div class="story_pane active">
+                    <img src="./img/s_2.jpg">
+                </div>
+                <div class="story_pane">
+                    <img src="./img/s_3.jpg">
+                </div>
+                <div class="story_pane">
+                    <img src="./img/s_4.jpg">
+                </div>
+                <div class="story_pane">
+                    <img src="./img/s_5.jpg">
+                </div>
+                <div class="story_pane">
+                    <img src="./img/s_6.jpg">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
