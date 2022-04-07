@@ -360,7 +360,7 @@ main .container .left .profile{
 
 .mid .create_post input[type="text"]{
     justify-self: start;
-    width: 71%;
+    width: 74%;
     padding-left: 1rem;
     background: transparent;
     color: var(--color-dark);
