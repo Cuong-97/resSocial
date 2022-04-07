@@ -34,6 +34,7 @@
     text-decoration: none;
     list-style: none;
     border: none;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -359,7 +360,7 @@ main .container .left .profile{
 
 .mid .create_post input[type="text"]{
     justify-self: start;
-    width: 65%;
+    width: 71%;
     padding-left: 1rem;
     background: transparent;
     color: var(--color-dark);
@@ -949,6 +950,10 @@ main .container .right{
     .customize_theme .card{
         width: 92wh;
     }
+    /* --------- Post -------- */
+    .mid .create_post input[type="text"] {
+        width: 76%;
+    }
     /* --------- Theme -------- */
     .customize_theme .card{
         width: 90%;
@@ -1030,6 +1035,10 @@ main .container .right{
 
     .customize_theme .card{
         width: 92wh;
+    }
+    /* --------- Post -------- */
+    .mid .create_post input[type="text"] {
+        width: 65%;
     }
     /* --------- Theme -------- */
     .customize_theme{
