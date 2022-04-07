@@ -102,6 +102,10 @@ nav .container{
     text-align: center;
     justify-content: space-between;
 }
+
+nav .container .name{
+    font-size: 2rem;
+}
 /* Dùng chung cho cả phần search bên right nên ko để nav đằng trước */
 .search_bar{
     background: var(--color-light);
@@ -274,10 +278,6 @@ main .container .left .profile{
     display: block;
 }
 
-.left .notifications_popup .avatar img{
-
-}
-
 /* <!---------------- Mid ----------------> */
 
 .mid .stories{
@@ -347,6 +347,7 @@ main .container .left .profile{
 
 .mid .create_post{
     width: 100%;
+    height: 4.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -358,7 +359,7 @@ main .container .left .profile{
 
 .mid .create_post input[type="text"]{
     justify-self: start;
-    width: 100%;
+    width: 65%;
     padding-left: 1rem;
     background: transparent;
     color: var(--color-dark);
@@ -379,6 +380,10 @@ main .container .left .profile{
 .mid .feed .head{
     display: flex;
     justify-content: space-between;
+}
+
+.mid .feed .new_feed{
+    padding: 1rem 1rem 0 1rem;
 }
 
 .mid .feed .user{
@@ -723,7 +728,9 @@ main .container .right{
 .photo_feeds_1,
 .photo_feeds_2,
 .photo_feeds_3,
-.photo_feeds_4{
+.photo_feeds_4,
+.photo_feeds_5,
+.photo_feeds_6{
     background: rgba(0, 0, 0, 0.6);
     width: 100vw;
     height: 100vh;
@@ -743,7 +750,9 @@ main .container .right{
 .photo_feeds_1 img,
 .photo_feeds_2 img,
 .photo_feeds_3 img,
-.photo_feeds_4 img{
+.photo_feeds_4 img,
+.photo_feeds_5 img,
+.photo_feeds_6 img{
     border-radius: var(--card-border-radius);
     height: 80vh;
     width: auto;
@@ -1023,6 +1032,9 @@ main .container .right{
         width: 92wh;
     }
     /* --------- Theme -------- */
+    .customize_theme{
+        background: rgba(255, 255, 255, 0);
+    }
     .customize_theme .card{
         width: 90%;
         margin: auto;
@@ -1043,6 +1055,9 @@ main .container .right{
     }
 
     /* --------- Story show -------- */
+    .story_show{
+        background: rgba(0, 0, 0, 0);
+    }
     .story_show .card{
         gap: 0rem;
         width: 88%;

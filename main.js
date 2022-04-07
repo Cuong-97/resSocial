@@ -33,11 +33,11 @@ const changeActiveItem = () => {
         item.classList.remove('active');
     })
 }
-menuItems.forEach(item =>{
+menuItems.forEach(item => {
     item.addEventListener('click', () => {
         changeActiveItem();
         item.classList.add('active');
-        if (item.id != 'notifications'){
+        if (item.id != 'notifications') {
             document.querySelector('.notifications_popup').style.display = 'none';
         } else {
             document.querySelector('.notifications_popup').style.display = 'block';
@@ -53,7 +53,7 @@ menuItems.forEach(item =>{
 
 const searchMessage = () => {
     const val = messageSearch.value.toLowerCase();
-    console.log(val);
+    // console.log(val);
     message.forEach(user => {
         let name = user.querySelector('h5').textContent.toLowerCase();
         if (name.indexOf(val) != -1) {
@@ -73,7 +73,7 @@ messagesNotification.addEventListener('click', () => {
     messagesNotification.querySelector('.notifications_count').style.display = 'none';
     setTimeout(() => {
         messages.style.boxShadow = 'none';
-    },2000);
+    }, 2000);
 })
 
 // ====================  THEME ====================
@@ -83,7 +83,7 @@ const openThemeModal = () => {
     themeModal.style.display = 'grid';
 }
 const closeThemeModal = (event) => {
-    if(event.target.classList.contains('customize_theme')){
+    if (event.target.classList.contains('customize_theme')) {
         themeModal.style.display = 'none';
     }
 }
@@ -104,29 +104,29 @@ const removeSizeSelector = () => {
 }
 
 fontSizes.forEach(size => {
-    
+
     size.addEventListener('click', () => {
         removeSizeSelector();
         let fontSize;
         size.classList.toggle('active');
 
-        if(size.classList.contains('font_size_1')){
+        if (size.classList.contains('font_size_1')) {
             fontSize = '15px';
             root.style.setProperty('--sticky-top-left', '5.4rem');
             root.style.setProperty('--sticky-top-right', '5.4rem');
-        } else if(size.classList.contains('font_size_2')){
+        } else if (size.classList.contains('font_size_2')) {
             fontSize = '16px';
             root.style.setProperty('--sticky-top-left', '5.4rem');
             root.style.setProperty('--sticky-top-right', '-7rem');
-        } else if(size.classList.contains('font_size_3')){
+        } else if (size.classList.contains('font_size_3')) {
             fontSize = '17px';
             root.style.setProperty('--sticky-top-left', '-2rem');
             root.style.setProperty('--sticky-top-right', '-17rem');
-        } else if(size.classList.contains('font_size_4')){
+        } else if (size.classList.contains('font_size_4')) {
             fontSize = '17.5px';
             root.style.setProperty('--sticky-top-left', '-5rem');
             root.style.setProperty('--sticky-top-right', '-25rem');
-        } else if(size.classList.contains('font_size_5')){
+        } else if (size.classList.contains('font_size_5')) {
             fontSize = '18px';
             root.style.setProperty('--sticky-top-left', '-12rem');
             root.style.setProperty('--sticky-top-right', '-35rem');
@@ -154,15 +154,15 @@ colorPalette.forEach(color => {
         // remove active class from colors
         changeActiveColorClass();
 
-        if(color.classList.contains('color_1')){
+        if (color.classList.contains('color_1')) {
             primaryHue = 252;
-        } else if(color.classList.contains('color_2')){
+        } else if (color.classList.contains('color_2')) {
             primaryHue = 52;
-        } else if(color.classList.contains('color_3')){
+        } else if (color.classList.contains('color_3')) {
             primaryHue = 352;
-        } else if(color.classList.contains('color_4')){
+        } else if (color.classList.contains('color_4')) {
             primaryHue = 152;
-        } else if(color.classList.contains('color_5')){
+        } else if (color.classList.contains('color_5')) {
             primaryHue = 202;
         }
         color.classList.add('active');
@@ -179,9 +179,9 @@ let darkColorLightness;
 
 // change background
 const changeBG = () => {
-    root.style.setProperty('--white-color-lightness',whiteColorLightness);
-    root.style.setProperty('--light-color-lightness',lightColorLightness);
-    root.style.setProperty('--dark-color-lightness',darkColorLightness);
+    root.style.setProperty('--white-color-lightness', whiteColorLightness);
+    root.style.setProperty('--light-color-lightness', lightColorLightness);
+    root.style.setProperty('--dark-color-lightness', darkColorLightness);
 }
 
 Bg1.addEventListener('click', () => {
@@ -244,10 +244,10 @@ btnDecline2.addEventListener('click', () => {
 
 // Change color button
 const change_color_heart = document.querySelectorAll('#change_color_heart');
-change_color_heart.forEach( (color) => {
+change_color_heart.forEach((color) => {
     color.addEventListener('click', () => {
         if (color.style.color == "red") {
-            color.style.color = "black"
+            color.style.color = "var(--color-dark)"
         } else {
             color.style.color = "red"
         }
@@ -255,10 +255,10 @@ change_color_heart.forEach( (color) => {
 })
 
 const change_color_comment = document.querySelectorAll('#change_color_comment');
-change_color_comment.forEach( (color) => {
+change_color_comment.forEach((color) => {
     color.addEventListener('click', () => {
         if (color.style.color == "green") {
-            color.style.color = "black"
+            color.style.color = "var(--color-dark)"
         } else {
             color.style.color = "green"
         }
@@ -266,18 +266,18 @@ change_color_comment.forEach( (color) => {
 })
 
 const change_color_share = document.querySelectorAll('#change_color_share');
-change_color_share.forEach( (color) => {
+change_color_share.forEach((color) => {
     color.addEventListener('click', () => {
-        if (color.style.color == "blue") {
-            color.style.color = "black"
+        if (color.style.color == "orange") {
+            color.style.color = "var(--color-dark)"
         } else {
-            color.style.color = "blue"
+            color.style.color = "orange"
         }
     })
 })
 
 
-        // ========== Zoom photo feeds ==========
+// ========== Zoom photo feeds ==========
 
 const ZoomPhoto1 = document.querySelector('#Zoom_photo_1')
 const photoFeeds1 = document.querySelector('.photo_feeds_1')
@@ -291,13 +291,19 @@ const photoFeeds3 = document.querySelector('.photo_feeds_3')
 const ZoomPhoto4 = document.querySelector('#Zoom_photo_4')
 const photoFeeds4 = document.querySelector('.photo_feeds_4')
 
-        // ====== Open & Close Zoom photo feeds method==========
+const ZoomPhoto5 = document.querySelector('#Zoom_photo_5')
+const photoFeeds5 = document.querySelector('.photo_feeds_5')
+
+const ZoomPhoto6 = document.querySelector('#Zoom_photo_6')
+const photoFeeds6 = document.querySelector('.photo_feeds_6')
+
+// ====== Open & Close Zoom photo feeds method==========
 
 const openPhotoFeeds1 = () => {
     photoFeeds1.style.display = 'grid';
 }
 const closePhotoFeeds1 = (event) => {
-    if(event.target.classList.contains('photo_feeds_1')){
+    if (event.target.classList.contains('photo_feeds_1')) {
         photoFeeds1.style.display = 'none';
     }
 }
@@ -306,7 +312,7 @@ const openPhotoFeeds2 = () => {
     photoFeeds2.style.display = 'grid';
 }
 const closePhotoFeeds2 = (event) => {
-    if(event.target.classList.contains('photo_feeds_2')){
+    if (event.target.classList.contains('photo_feeds_2')) {
         photoFeeds2.style.display = 'none';
     }
 }
@@ -315,7 +321,7 @@ const openPhotoFeeds3 = () => {
     photoFeeds3.style.display = 'grid';
 }
 const closePhotoFeeds3 = (event) => {
-    if(event.target.classList.contains('photo_feeds_3')){
+    if (event.target.classList.contains('photo_feeds_3')) {
         photoFeeds3.style.display = 'none';
     }
 }
@@ -324,12 +330,30 @@ const openPhotoFeeds4 = () => {
     photoFeeds4.style.display = 'grid';
 }
 const closePhotoFeeds4 = (event) => {
-    if(event.target.classList.contains('photo_feeds_4')){
+    if (event.target.classList.contains('photo_feeds_4')) {
         photoFeeds4.style.display = 'none';
     }
 }
 
-        // ========== Open & Close Zoom photo feeds ==========
+const openPhotoFeeds5 = () => {
+    photoFeeds5.style.display = 'grid';
+}
+const closePhotoFeeds5 = (event) => {
+    if (event.target.classList.contains('photo_feeds_5')) {
+        photoFeeds5.style.display = 'none';
+    }
+}
+
+const openPhotoFeeds6 = () => {
+    photoFeeds6.style.display = 'grid';
+}
+const closePhotoFeeds6 = (event) => {
+    if (event.target.classList.contains('photo_feeds_6')) {
+        photoFeeds6.style.display = 'none';
+    }
+}
+
+// ========== Open & Close Zoom photo feeds ==========
 
 photoFeeds1.addEventListener('click', closePhotoFeeds1);
 ZoomPhoto1.addEventListener('click', openPhotoFeeds1);
@@ -343,7 +367,11 @@ ZoomPhoto3.addEventListener('click', openPhotoFeeds3);
 photoFeeds4.addEventListener('click', closePhotoFeeds4);
 ZoomPhoto4.addEventListener('click', openPhotoFeeds4);
 
+photoFeeds5.addEventListener('click', closePhotoFeeds5);
+ZoomPhoto5.addEventListener('click', openPhotoFeeds5);
 
+photoFeeds6.addEventListener('click', closePhotoFeeds6);
+ZoomPhoto6.addEventListener('click', openPhotoFeeds6);
 
 
 // ========== Story show ==========
@@ -358,15 +386,15 @@ const tabActive = $(".story_item.active");
 
 
 tabs.forEach((tab, index) => {
-  const pane = panes[index];
+    const pane = panes[index];
 
-  tab.onclick = function () {
-    $(".story_item.active").classList.remove("active");
-    $(".story_pane.active").classList.remove("active");
+    tab.onclick = function () {
+        $(".story_item.active").classList.remove("active");
+        $(".story_pane.active").classList.remove("active");
 
-    this.classList.add("active");
-    pane.classList.add("active");
-  };
+        this.classList.add("active");
+        pane.classList.add("active");
+    };
 });
 
 // ========== Open & close Story show ==========
@@ -378,7 +406,7 @@ const openStoryMethod = () => {
     storyContent.style.display = 'grid';
 }
 const closeStoryMethod = (event) => {
-    if(event.target.classList.contains('story_show')){
+    if (event.target.classList.contains('story_show')) {
         storyContent.style.display = 'none';
     }
 }
@@ -386,3 +414,35 @@ const closeStoryMethod = (event) => {
 
 openStory.addEventListener('click', openStoryMethod);
 storyContent.addEventListener('click', closeStoryMethod);
+
+// ========== Post feeds ==========
+
+document.getElementById('post_feed').addEventListener('click', post);
+function post() {
+    const createFeed = document.getElementById('create_feed').value;
+
+    let addFeed = document.getElementById('add_feed');
+    addFeed.insertAdjacentHTML('afterbegin',
+    '<div class="feed">'+
+        '<div class="head">'+
+            '<div class="user">'+
+                '<div class="avatar">'+
+                    '<img src="./img/a_1.jpg" >'+
+                '</div>'+
+                '<div class="info">'+
+                    '<h3>Duy Cuong</h3>'+
+                    '<small>JAPAN, JUST FINISHED</small>'+
+                '</div>'+
+            '</div>'+
+            '<span class="edit"><i class="fa-solid fa-ellipsis"></i></span>'+
+        '</div>'+
+        '<div class="new_feed">'+ 
+            createFeed +
+        '</div>'+
+        '<div class="action_buttons">'+
+            '<div class="interaction_buttons">'+
+            '</div>'+
+            '<div class="bookmark"><span><i class="uil uil-bookmark"></i></span></div>'+
+    '</div>');
+
+}

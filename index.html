@@ -13,7 +13,7 @@
 <body>
     <nav>
         <div class="container">
-            <h2 class="name">resSocial</h2>
+            <h2 class="name">Res.Social</h2>
             <div class="search_bar">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="search" placeholder="Search on resSocial">
@@ -159,16 +159,16 @@
                     </div>
                 </div>
                 <!---------------- End stories ---------------->
-                <form class="create_post">
+                <label class="create_post">
                     <div class="avatar">
                         <img src="./img/a_1.jpg" >
                     </div>
-                    <input type="text" placeholder="What's on your mind, Cuong?" id="create_post">
-                    <input type="submit" value="Post" class="btn btn_primary">
-                </form>
+                    <input type="text" placeholder="What's on your mind, Cuong?" id="create_feed">
+                    <button class="btn btn_primary" id="post_feed">Post</button>
+                </label>
 
                 <!---------------- feeds ---------------->
-                <div class="feeds">
+                <div class="feeds" id="add_feed">
                     <!---------------- feeds 1---------------->
                     <div class="feed">
                         <div class="head">
@@ -178,7 +178,7 @@
                                 </div>
                                 <div class="info">
                                     <h3>Kamisato Ayaka</h3>
-                                    <small>Inazuma, 15 MINUTES AGO</small>
+                                    <small>INAZUMA, 15 MINUTES AGO</small>
                                 </div>
                             </div>
                             <span class="edit"><i class="fa-solid fa-ellipsis"></i></span>
@@ -218,7 +218,7 @@
                                 </div>
                                 <div class="info">
                                     <h3>Kamisato Ayato</h3>
-                                    <small>Inazuma, 30 MINUTES AGO</small>
+                                    <small>INAZUMA, 30 MINUTES AGO</small>
                                 </div>
                             </div>
                             <span class="edit"><i class="fa-solid fa-ellipsis"></i></span>
@@ -242,12 +242,12 @@
                             <span><img src="./img/a_8.png" ></span>
                             <span><img src="./img/a_9.png" ></span>
                             <span><img src="./img/a_7.png" ></span>
-                            <p>Liked by <b> Ayato </b> and <b>24 others</b></p>
+                            <p>Liked by <b> Ayato </b> and <b>22 others</b></p>
                         </div> 
                         <div class="caption">
-                            <p>The Immovable God and the Eternal Euthymia</p>
+                            <p>Hues of the Violet Garden</p>
                         </div>
-                        <div class="comments text_muted">View all 30 comments</div>
+                        <div class="comments text_muted">View all 25 comments</div>
                     </div>
                     <!---------------- feeds 3---------------->
                     <div class="feed">
@@ -258,16 +258,14 @@
                                 </div>
                                 <div class="info">
                                     <h3>Yae Miko</h3>
-                                    <small>Inazuma, 45 MINUTES AGO</small>
+                                    <small>INAZUMA, 45 MINUTES AGO</small>
                                 </div>
                             </div>
                             <span class="edit"><i class="fa-solid fa-ellipsis"></i></span>
                         </div>
 
                         <div class="photo">
-                            <img>
-                                <iframe width="100%" height="315" style="border-radius: 1rem;" src="https://www.youtube.com/embed/tV2QOX9fXEE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </img>
+                            <img src="./img/p_3.jpg" id="Zoom_photo_3">
                         </div>
 
                         <div class="action_buttons">
@@ -300,14 +298,14 @@
                                 </div>
                                 <div class="info">
                                     <h3>Kazuha</h3>
-                                    <small>Inazuma, 15 MINUTES AGO</small>
+                                    <small>INAZUMA, 15 MINUTES AGO</small>
                                 </div>
                             </div>
                             <span class="edit"><i class="fa-solid fa-ellipsis"></i></span>
                         </div>
 
                         <div class="photo">
-                            <img src="./img/p_3.jpg" id="Zoom_photo_3">
+                            <img src="./img/p_4.jpg" id="Zoom_photo_4">
                         </div>
 
                         <div class="action_buttons">
@@ -336,20 +334,18 @@
                         <div class="head">
                             <div class="user">
                                 <div class="avatar">
-                                    <img src="./img/a_92.png" >
+                                    <img src="./img/a_99.jpg" >
                                 </div>
                                 <div class="info">
-                                    <h3>Ganyu</h3>
-                                    <small>Liyue, 46 MINUTES AGO</small>
+                                    <h3>Arataki Itto</h3>
+                                    <small>INAZUMA, 46 MINUTES AGO</small>
                                 </div>
                             </div>
                             <span class="edit"><i class="fa-solid fa-ellipsis"></i></span>
                         </div>
 
                         <div class="photo">
-                            <img>
-                                <iframe width="100%" height="315" style="border-radius: 1rem;" src="https://www.youtube.com/embed/ASO6t2zp_UI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </img>
+                            <img src="./img/p_5.jpg" id="Zoom_photo_5">
                         </div>
 
                         <div class="action_buttons">
@@ -389,7 +385,7 @@
                         </div>
 
                         <div class="photo">
-                            <img src="./img/p_4.jpg" id="Zoom_photo_4">
+                            <img src="./img/p_6.jpg" id="Zoom_photo_6">
                         </div>
 
                         <div class="action_buttons">
@@ -612,6 +608,12 @@
     </div>
     <div class="photo_feeds_4">
         <img src="./img/p_4.jpg">
+    </div>
+    <div class="photo_feeds_5">
+        <img src="./img/p_5.jpg">
+    </div>
+    <div class="photo_feeds_6">
+        <img src="./img/p_6.jpg">
     </div>
 
 <!--------------------------------------------------------------- Story show --------------------------------------------------------------------->
