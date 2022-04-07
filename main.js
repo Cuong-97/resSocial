@@ -242,7 +242,7 @@ btnDecline2.addEventListener('click', () => {
     btnAccept2.style.display = 'none';
 })
 
-// Change color like button
+// Change color button
 const change_color_heart = document.querySelectorAll('#change_color_heart');
 change_color_heart.forEach( (color) => {
     color.addEventListener('click', () => {
@@ -251,7 +251,28 @@ change_color_heart.forEach( (color) => {
         } else {
             color.style.color = "red"
         }
-        
+    })
+})
+
+const change_color_comment = document.querySelectorAll('#change_color_comment');
+change_color_comment.forEach( (color) => {
+    color.addEventListener('click', () => {
+        if (color.style.color == "green") {
+            color.style.color = "black"
+        } else {
+            color.style.color = "green"
+        }
+    })
+})
+
+const change_color_share = document.querySelectorAll('#change_color_share');
+change_color_share.forEach( (color) => {
+    color.addEventListener('click', () => {
+        if (color.style.color == "blue") {
+            color.style.color = "black"
+        } else {
+            color.style.color = "blue"
+        }
     })
 })
 
@@ -266,6 +287,9 @@ const photoFeeds2 = document.querySelector('.photo_feeds_2')
 
 const ZoomPhoto3 = document.querySelector('#Zoom_photo_3')
 const photoFeeds3 = document.querySelector('.photo_feeds_3')
+
+const ZoomPhoto4 = document.querySelector('#Zoom_photo_4')
+const photoFeeds4 = document.querySelector('.photo_feeds_4')
 
         // ====== Open & Close Zoom photo feeds method==========
 
@@ -296,6 +320,15 @@ const closePhotoFeeds3 = (event) => {
     }
 }
 
+const openPhotoFeeds4 = () => {
+    photoFeeds4.style.display = 'grid';
+}
+const closePhotoFeeds4 = (event) => {
+    if(event.target.classList.contains('photo_feeds_4')){
+        photoFeeds4.style.display = 'none';
+    }
+}
+
         // ========== Open & Close Zoom photo feeds ==========
 
 photoFeeds1.addEventListener('click', closePhotoFeeds1);
@@ -306,6 +339,9 @@ ZoomPhoto2.addEventListener('click', openPhotoFeeds2);
 
 photoFeeds3.addEventListener('click', closePhotoFeeds3);
 ZoomPhoto3.addEventListener('click', openPhotoFeeds3);
+
+photoFeeds4.addEventListener('click', closePhotoFeeds4);
+ZoomPhoto4.addEventListener('click', openPhotoFeeds4);
 
 
 
@@ -333,7 +369,7 @@ tabs.forEach((tab, index) => {
   };
 });
 
-// ========== Open % close Story show ==========
+// ========== Open & close Story show ==========
 
 const openStory = document.querySelector('#open_story')
 const storyContent = document.querySelector('.story_show')
