@@ -1006,23 +1006,58 @@ main .container .right{
     }
 
     main .container .left{
-        grid-column: 3/4;
+        position: fixed;
+    }
+
+    .left .sidebar {
+        margin-top: 1rem;
+        background: var(--color-white);
+        border-radius: var(--card-border-radius);
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
         position: fixed;
         bottom: 0;
-        right: 0;
+        z-index: 1000;
+        width: 100%;
+        margin: auto;
+        padding: 0.5rem;
+        cursor: default;
     }
+
+    .left .sidebar #none_mobile{
+        display: none;
+    }
+
+    .left .sidebar .menu_item span{
+        justify-content: center;
+    } 
+
+    .left .sidebar i {
+        font-size: 2rem;
+        margin-left: 0rem;
+    }
+
+    .left .sidebar .active::before{
+        display: none;
+    }
+
+    .left .sidebar .active{
+        border-top:0.5rem solid var(--color-primary);
+        background: var(--color-white);
+    }
+
+    .left .sidebar .menu_item:hover{
+        background: var(--color-white);
+    }
+
     /* --------- Notification popup -------- */
     .left .notifications_popup{
-        position: absolute;
-        left: -20rem;
-        width: 20rem;
+        display: none !important;
     }
 
     .left .notifications_popup::before{
-        position: absolute;
-        top: 1.3rem;
-        left: calc(20rem - 0.6rem);
-        display: block;
+        display: none;
     }
 
     main .container .mid{
@@ -1042,11 +1077,14 @@ main .container .right{
     }
     /* --------- Theme -------- */
     .customize_theme{
-        background: rgba(255, 255, 255, 0);
+        background: rgba(0, 0, 0, 0.5);
+        width: auto;
+        height: auto
     }
     .customize_theme .card{
         width: 90%;
         margin: auto;
+        
     }
     .customize_theme .background .choose_bg h5{
         display: none;
@@ -1055,22 +1093,51 @@ main .container .right{
         margin-right: 0;
     }
     /* --------- Photo feeds -------- */
-
+    .photo_feeds_1,
+    .photo_feeds_2,
+    .photo_feeds_3,
+    .photo_feeds_4,
+    .photo_feeds_5, 
+    .photo_feeds_6 {
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        font-size: 0.9rem;
+        display: none;
+    }
     .photo_feeds_1 img,
     .photo_feeds_2 img,
     .photo_feeds_3 img,
-    .photo_feeds_4 img{
-        width: 90vw;
+    .photo_feeds_4 img,
+    .photo_feeds_5 img,
+    .photo_feeds_6 img{
+        width: 94%;
+        margin: auto;
+        height: auto;
     }
 
     /* --------- Story show -------- */
     .story_show{
-        background: rgba(0, 0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: auto;
+        right: 0;
+        bottom: 0;
     }
     .story_show .card{
         gap: 0rem;
-        width: 88%;
-        height: 60%;
+        width: 92%;
+        height: auto;
+        margin: auto;
     }
     .story_show .story_pane img{
         height: 90vw;
@@ -1084,9 +1151,11 @@ main .container .right{
         width: 2rem;
         height: 2rem;
     }
-    .story_show .story_item div h4,
-    .story_show .story_item div h5 {
-        display: none;
+    .story_show .story_item {
+        gap: 1rem;
+        padding: 0.5rem 0 0.5rem 0.5rem;
+        width: auto;
+        margin: 0.6rem;
     }
 
     /* button cursor */
